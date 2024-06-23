@@ -1,4 +1,10 @@
 import streamlit as st
+import troch
+
+model_path = 'Model.py'
+
+model = torch.load('Model.py')
+model.eval() 
 
 st.title("T-Rex Runner Game")
 
