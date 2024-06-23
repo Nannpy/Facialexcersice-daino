@@ -4,6 +4,7 @@ import cv2 as cv2
 import time
 import utils, math
 import pandas as pd
+import numpy as np
 import streamlit as st
 from pynput.keyboard import Key,Controller
 from PIL import ImageTk
