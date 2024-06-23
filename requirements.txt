@@ -1,0 +1,9 @@
+opencv-python
+mediapipe
+fastbook
+numpy
+pathlib
+dlib
+imutils
+gradio
+ffmpeg
