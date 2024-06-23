@@ -4,8 +4,19 @@ import cv2 as cv2
 import time
 import utils, math
 import pandas as pd
+import streamlit as st
 from pynput.keyboard import Key,Controller
 from PIL import ImageTk
+
+# try
+st.title('Facial Excersice-DaiNo')   
+game_url = "https://vianroyal.github.io/t-rex-runner/"
+st.markdown(
+    f"""
+    <iframe src="{game_url}" width="800" height="600" frameborder="0"></iframe>
+    """,
+    unsafe_allow_html=True
+)
 
 # Fast Ai
 from fastbook import *
@@ -237,7 +248,7 @@ c = 3
 window = tk.Tk()
 window.title("Facial exercise with DAI-NO")
 
-video = cv2.VideoCapture(1)
+video = cv2.VideoCapture(0)
 with map_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence=0.5) as face_mesh:
     start_time = time.time()
     start_n = time.time()
