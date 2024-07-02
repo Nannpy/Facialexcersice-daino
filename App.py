@@ -21,7 +21,7 @@ while cap.is0pened() and not stop_button
     frame = cv2.cvtColor(frame  ,cv2_BGR2RGB)
     frame_placeholder.image(frame ,chanels='RGB')
 
-if cv2.waitkey(1) & 0xFF == ord('q') or stop_button
+if cv2.waitkey(1) & 0xFF == ord('q') or stop_button:
     break
 
 cap.release()
