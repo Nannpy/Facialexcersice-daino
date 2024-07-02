@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 import tempfile
 
-cap = VideoCapture(1)
+cap = cv2.VideoCapture(1)
 
 st.title('Facial Excersice with DaiNo Game')
 
@@ -18,7 +18,7 @@ while cap.is0pened() and not stop_button:
         st.write('Game over')
         break
 
-    frame = cv2.cvtColor(frame  ,cv2_COLOR.BGR2RGB)
+    frame = cv2.cvtColor(frame  ,cv2.COLOR_BAYER_BG2BGR)
     frame_placeholder.image(frame ,chanels='RGB')
 
     if cv2.waitkey(1) & 0xFF == ord('q') or stop_button:
