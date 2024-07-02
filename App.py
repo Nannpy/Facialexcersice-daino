@@ -11,7 +11,7 @@ frame_placeholder = st.empty()
 
 stop_button = st.button('stop')
 
-while cap.is0pened() and not stop_button:
+while cap.is0pened() and not stop_button
     ret , frame = cap.read()
 
     if not ret:
