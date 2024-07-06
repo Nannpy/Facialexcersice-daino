@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 import tempfile
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 st.title('Facial Excersice with DaiNo Game')
 
@@ -11,7 +11,7 @@ frame_placeholder = st.empty()
 
 stop_button = st.button('stop')
 
-while cap.isopened() and not stop_button:
+while cap.isOpened() and not stop_button:
     ret , frame = cap.read()
 
     if not ret:
