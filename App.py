@@ -18,11 +18,11 @@ while cap.isOpened() and not stop_button:
         st.write('Game over')
         break
 
-    frame = cv2.cvtColor(frame  ,cv2.COLOR_BAYER_BG2BGR)
-    frame_placeholder.image(frame ,chanels='RGB')
+    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    frame_placeholder.image(frame ,channels='RGB')
 
-    if cv2.waitkey(1) & 0xFF == ord('q') or stop_button:
+    if cv2.waitKey(1) & 0xFF == ord('q') or stop_button:
         break
 
 cap.release()
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()  
