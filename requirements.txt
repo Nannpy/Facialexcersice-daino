@@ -8,3 +8,5 @@ pathlib
 imutils
 gradio
 ffmpeg
+cv2
+av
