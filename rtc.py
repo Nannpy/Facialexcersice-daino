@@ -1,30 +1,14 @@
-# import streamlit as st  
-# from streamlit_webrtc import webrtc_streamer
-# import cv2
-# import av 
-
-# st.title('Daino Game camera Test')
-
-# # webrtc_streamer(key = 'sample')
-
-# class VideoProcessor :
-#     def recv(self,frame):
-#         img = frame.to_ndarray(format = 'bgr24')
-
-#         img = cv2.cvtColor(cv2.Canny(img,100,200), cv2.COLOR_GRAY2BGR)
-
-#         return av.VideoFrame.from_ndarray(img, format="bgr24")
-    
-# webrtc_streamer(key = 'edge', video_processor_factory = VideoProcessor)
-
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
-import av
 
-class VideoTransformer(VideoTransformerBase):
-    def transform(self, frame):
-        img = frame.to_ndarray(format="bgr24")
-        return av.VideoFrame.from_ndarray(img, format="bgr24")
+game_url = 'http://staging.flappybird.io/'
 
-st.title("Webcam Streamlit App")
-webrtc_streamer(key="example", video_transformer_factory=VideoTransformer)
+# 'https://vianroyal.github.io/t-rex-runner/'
+# 'http://wayou.github.io/t-rex-runner/'
+
+with st.container():
+    st.markdown(f"""
+    <iframe src="{game_url}" width="100%" height="300" frameborder="0"></iframe>
+    """, unsafe_allow_html=True)
+
+# with st.container():
+#     webcam_video = st.camera_input('')
